@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Third Page</title>
+</head>
+<script>
+function validation()
+{
+var x=document.forms["third"]["ID"].value;
+var y=document.forms["third"]["Name"].value;
+var z=document.forms["third"]["Email"].value;
+var p=document.forms["third"]["Address"].value;
+if(x=="")
+	{
+	alert("ID enter chey ra mabbu ga")
+	return false;
+	}
+else if(y=="")
+	{
+	alert("Name enter chey ra Dafle")
+	return false;
+	}
+else if(z=="")
+	{
+	alert("Email  enter chey ra M****C")
+	return false;
+	}
+else if(p=="")
+	{
+	alert("Adress edavu chesthadu ra -_-''")
+	return false;
+	}
+}
+</script>
+<body background="G:\images\White-wallpaper-background.jpg">
+<form action="./ThirdPage" name="third" onsubmit="return validation()" method="post">
+	<table align=center>
+	<center><h2>THIRD PAGE</h2></center>
+<tr><td>ID:</td><td><input type="text" name="ID"/></td></tr>
+<tr><td>Name:</td><td><input type="text" name="Name"/></td></tr>
+<tr><td>EMAIL:</td><td><input type="text" name="Email"/></td></tr>
+<tr><td>ADDRESS:</td><td><textarea rows="5" cols="15" name="Address"></textarea></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr>
+	</table>
+</form>	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>First Page</title>
+</head>
+<script>
+function validation()
+{
+var x=document.forms["first"]["ID"].value;
+var y=document.forms["first"]["Name"].value;
+var z=document.forms["first"]["Email"].value;
+var p=document.forms["first"]["Address"].value;
+if(x=="")
+	{
+	alert("ID enter chey raa")
+	return false;
+	}
+else if(y=="")
+	{
+	alert("Name enter chey ra Dafle")
+	return false;
+	}
+else if(z=="")
+	{
+	alert("Email  enter chey ra M****C")
+	return false;
+	}
+else if(p=="")
+	{
+	alert("Adress edavu chesthadu ra -_-''")
+	return false;
+	}
+}
+</script>
+<body background="E:\Images\2.jpg">
+<form action="./FirstPage" name="first" onsubmit="return validation()" method="post">
+	<table align=center>
+	<center><h2>FIRST PAGE</h2>
+<tr><td>ID:</td><td><input type="text" name="ID" /></td></tr>
+<tr><td>Name:</td><td><input type="text" name="Name" /></td></tr>
+<tr><td>EMAIL:</td><td><input type="text" name="Email" /></td></tr>
+<tr><td>ADDRESS:</td><td><textarea rows="5" cols="15" name="Address" ></textarea></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr></center>
+	</table>
+</form>	
+</body>
+</html>

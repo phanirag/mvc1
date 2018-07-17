@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Second Page</title>
+<link rel="stylesheet" href="Info.css">
+</head>
+<script>
+function validation()
+{
+var x=document.forms["second"]["ID"].value;
+var y=document.forms["second"]["Name"].value;
+var z=document.forms["second"]["Email"].value;
+var p=document.forms["second"]["Address"].value;
+if(x=="")
+	{
+	alert("ID enter chey ra mabbu ga")
+	return false;
+	}
+else if(y=="")
+	{
+	alert("Name enter chey ra Dafle")
+	return false;
+	}
+else if(z=="")
+	{
+	alert("Email  enter chey ra M****C")
+	return false;
+	}
+else if(p=="")
+	{
+	alert("Adress edavu chesthadu ra -_-''")
+	return false;
+	}
+}
+</script>
+<body background="G:\images\wallpaper.jpg">
+<form action="./Second" name="second" method="post" onsubmit="return validation()">
+	<table align=center>
+	<center><h2>SECOND PAGE</h2></center>
+<tr><td>ID:</td><td><input type="text" name="ID"/></td></tr>
+<tr><td>Name:</td><td><input type="text" name="Name"/></td></tr>
+<tr><td>EMAIL:</td><td><input type="text" name="Email"/></td></tr>
+<tr><td>ADDRESS:</td><td><textarea rows="5" cols="15" name="Address"></textarea></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr>
+	</table>
+</form>	
+</body>
+</html>
