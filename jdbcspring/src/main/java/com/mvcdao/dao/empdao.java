@@ -2,17 +2,21 @@ package com.mvcdao.dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.mvcdao.model.emp;
+import com.mvcdao.utils.appConfig;
 
+@Component
 public class empdao {
-	private JdbcTemplate JdbcTemplate;
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		JdbcTemplate = jdbcTemplate;
-	}
+	
+	@Autowired
+	public  appConfig cf;
 
+	JdbcTemplate JdbcTemplate=cf.jtObj();
+	
 	public int save(emp p) {
 		String sql="insert into empl values(?,?,?,?)";
 		return JdbcTemplate.update(sql,p.getID(),p.getName(),p.getEmail(),p.getAddress());		

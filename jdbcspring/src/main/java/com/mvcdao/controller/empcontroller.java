@@ -5,24 +5,22 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.mvcdao.dao.empdao;
 import com.mvcdao.model.emp;
-import com.oracle.webservices.internal.api.databinding.Databinding.Builder;
 
 @Controller
 public class empcontroller {
+	
 	@Autowired
-	empdao empdao;
+	private empdao empdao;
 	
 	@RequestMapping(value="/empform",method=RequestMethod.GET)
 	public ModelAndView empform() {
